@@ -1,0 +1,52 @@
+.btn{
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px;
+    padding:1rem 1.5rem;
+    letter-spacing: .3rem;
+    border-radius: 5px;
+    &__icon{
+        @include resizeSvgSq(3.5rem);
+        fill: var(--color-white);
+        margin-right: 2px;
+    }
+}
+.btn-animated-pulse{
+    perspective: 150rem;
+    animation: pulse 30s infinite;
+    animation-delay: 10s;
+    border: 2px solid transparent;
+    &:hover{
+        animation: none
+    }
+}
+.btn-orange{
+    @include colorAndHover(orangered);
+}
+.btn-primary{
+    @include colorAndHover($color-pri);
+}
+.btn-inline{
+    display: inline-block;
+}
+.btn-transparent{
+    background-color: transparent;
+}
+.btn-orange-border{
+    border: 2px solid orangered;
+}
+.read-more{
+    border: none;
+    outline: none;
+    padding: 2rem 0;
+    padding-bottom: 0;
+    border-bottom: 3px solid var(--color-primary-dark);
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    color: var(--color-primary-dark);
+    background-color: transparent;
+}
+.navigation__button{
+    padding: 4rem;
+}

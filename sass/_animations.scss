@@ -1,0 +1,14 @@
+@keyframes pulse{
+    0%{
+        box-shadow: 0 0 10px;
+        border: 2px solid red;
+    }
+    20%{
+        box-shadow: 0 0 20px;
+        border: 2px solid red;
+        transform: rotate(360deg);
+    }
+    60%{
+        box-shadow: 0 0 30px;
+    }
+}

@@ -1,0 +1,119 @@
+.blogs{
+    width: 90vw;
+    margin: 1rem auto;
+    &__navigation{
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        padding: 12rem 2rem;
+        &:first-child{
+            margin-bottom: 4rem;
+        }
+        &__button{
+            border: 1px solid var(--color-primary-dark);
+            outline: none;
+            box-shadow: 0 0 5px;
+            border-radius: 3px;
+            background-color: transparent;
+            cursor: pointer;
+            transition: all .3s ease;
+            &:hover{
+                background-color: var(--color-white-lighter);
+                border-radius: 50%;
+                // box-shadow: 0 0 15px;
+            }
+            &--svg{
+                @include resizeSvgSq(7rem);
+                fill: var(--color-primary);
+                height: 8rem;
+            }
+        }
+    }
+    &__buttons{
+        display: flex;
+        align-items: center;
+    }
+}
+.container-blogs{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 75%;
+    grid-gap: 5%;
+}
+.blogs-container{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    overflow: scroll;
+    overflow-y: hidden;
+    &::-webkit-scrollbar{
+        width: 0;
+    }
+    // &::-webkit-scrollbar-track{
+    //     background-color: var(--color-primary-dark);
+    //     border-radius: 100px;
+    //     height: 2px;
+    // }
+    // &::-webkit-scrollbar-thumb{
+    //     background-color: orangered;
+    //     height: 100%;
+    //     border-radius: 100px;
+    // }
+}
+.blog-card{
+    min-width: 40rem;
+    max-width: 40rem;
+    box-shadow: 0 0 10px;
+    &:not(:last-child){
+        margin-right: 5rem;
+    }
+    &__blogger{
+        padding: 2rem;
+        padding-bottom: .2rem;
+        display: flex;
+        align-items: center;
+        &--image{
+            margin-right: auto;
+            &--img{
+                @include createToCircle(7rem); 
+            }
+        }
+        &--data{
+            display: flex;
+            flex-direction: column;
+            &--name{
+                font-size: 2rem;
+                text-transform: capitalize;
+                letter-spacing: .1rem;
+                font-weight: bold;
+            }
+            &--date{
+                font-style: oblique;
+                text-transform: capitalize;
+            }
+        }
+    }
+    &__image{
+        height: 20rem;
+        background-position: center;
+        background-size: cover;
+        &--img1{
+            background-image: url(../images/operation.jpg);
+        }
+        &--img2{
+            background-image: url(../images/pregnancy.jpg);
+        }
+        &--img3{
+            background-image: url(../images/lab.jpg);
+        }
+        &--img4{
+            background-image: url(../images/ward.jpg);
+        }
+        &--img5{
+            background-image: url(../images/ambulance.jpg);
+        }
+    }
+    &__content{
+        padding: 1rem;
+    }
+}
